@@ -35,8 +35,9 @@ npm install mysql
 
 npm install nodemon
 
+3. Potrzebujemy zainstalować server MySQL wersja 8.0 - najlepiej Workbench.
 
-3. Po instalacji paczek uruchamiamy npm start w folderze 'client' oraz 'server'.
+4. Po instalacji paczek uruchamiamy npm start w folderze 'client' oraz 'server'.
 
-4. Startujemy z '/' i logujemy się :)
+5. Startujemy z '/' i logujemy się :)
 
