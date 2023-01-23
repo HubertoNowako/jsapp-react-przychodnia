@@ -1,7 +1,6 @@
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
   Outlet
 } from "react-router-dom";
 import Register from "./pages/Register";
@@ -11,6 +10,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import User from "./pages/User";
 import "./style.scss";
+import Worktables from "./pages/Worktables";
+import AddWorktable from "./pages/AddWorktable";
 
 const Layout = () => {
   return (
@@ -32,8 +33,16 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "/post/:id",
+        path: "/worker/:id",
         element: <User />
+      },
+      {
+        path: "/worktables",
+        element: <Worktables />
+      },
+      {
+        path: "/AddWorktable",
+        element: <AddWorktable />
       }
     ]
   },

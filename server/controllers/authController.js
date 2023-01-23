@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken"
 
 export const register = (req, res)=>{
     // SPRAWDZENIE, CZY USER ISTNIEJE
-    const q = "SELECT * FROM pracownicy WHERE Login = ?"
+    const q = "SELECT * FROM workers WHERE Login = ?"
 
     db.query(q, [req.body.login], (err,data)=>{
         if(err) return res.json(err)
@@ -14,7 +14,7 @@ export const register = (req, res)=>{
         const salt = bcrypt.genSaltSync(10);
         const hash = bcrypt.hashSync(req.body.password, salt);
 
-        const q = "INSERT INTO pracownicy(`imię`,`nazwisko`,`login`,`hasło`) VALUES (?)"
+        const q = "INSERT INTO workers(`imię`,`nazwisko`,`login`,`hasło`) VALUES (?)"
         const values = [
             req.body.imie,
             req.body.nazwisko,
@@ -31,7 +31,7 @@ export const register = (req, res)=>{
 
 export const login = (req,res)=>{
     // SPRAWDZANIE CZY USER ISTNIEJE
-    const q = "SELECT * FROM pracownicy WHERE login = ?"
+    const q = "SELECT * FROM workers WHERE login = ?"
 
     db.query(q, [req.body.login], (err,data)=>{
         if (err) return res.json(err);

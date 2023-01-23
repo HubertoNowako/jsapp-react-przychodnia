@@ -1,13 +1,12 @@
 import express from "express"
-import { addWorktable, deleteWorktable, getWorktable, getWorktables, updateWorktable } from "../controllers/worktableController"
+import { addWorktable, deleteWorktable, getWorktables, updateWorktable } from "../controllers/worktableController.js"
 
 const router = express.Router()
 
 router.get("/", getWorktables)
-router.get("/:id", getWorktable)
-router.post("/", addWorktable)
+router.post("/AddWorktable", addWorktable)
 router.delete("/:id", deleteWorktable)
-router.update("/:id", updateWorktable)
+router.put("/:id", updateWorktable)
 
 
 export default router

@@ -22,9 +22,9 @@ const Navbar = () => {
         <div className='panel'>
           <span> {currentUser?.login} </span>
           {currentUser ? (<span className='logout' onClick={logout}> Wyloguj! </span>) : (<Link className='link' to="/login"> Zaloguj się! </Link>)}
-          <span className="dodaj">
-            <Link to="/dodajDyzur">Dodaj</Link>
-          </span>
+          {currentUser ? (<span className="dodaj">
+            <Link to="/AddWorktable">Dodaj</Link>
+          </span>): <span></span>}
         </div>
       </div>
     </div>
