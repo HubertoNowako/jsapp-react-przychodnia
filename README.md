@@ -1,7 +1,9 @@
 1. Dzień dobry, zrobiliśmy tyle, na ile starczyło nam czasu - z góry przepraszamy za biedę i liczymy, że uda się wyciągnąć chociaż 33pkt.
 
 2. Wymagane node_modules:
+
 a) folder client
+
 npm install react
 
 npm install axios
